@@ -1,0 +1,32 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Partisan Gaps with Independent Leaners Grouped with Their Party},
+note{}={Reference: Independents who do not lean to either party. Standard errors clustered by respondent. * p < .10. ** p < .05. *** p < .01.},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-5}{solid, black, 0.05em},
+hline{14}={1-5}{solid, black, 0.05em},
+hline{1}={1-5}{solid, black, 0.08em},
+hline{16}={1-5}{solid, black, 0.08em},
+column{2-5}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Model 1 & Model 2 & Model 3 & Model 2, five categories \\
+Republican incl. leaners & \num{0.167}* & \num{0.246}** & \num{0.181}* &  \\
+& (\num{0.092}) & (\num{0.101}) & (\num{0.103}) &  \\
+Democrat incl. leaners & \num{-0.247}*** & \num{-0.153} & \num{-0.147} &  \\
+& (\num{0.092}) & (\num{0.101}) & (\num{0.103}) &  \\
+Republican &  &  &  & \num{0.271}*** \\
+&  &  &  & (\num{0.101}) \\
+Lean Republican &  &  &  & \num{0.187}* \\
+&  &  &  & (\num{0.104}) \\
+Lean Democrat &  &  &  & \num{-0.172}* \\
+&  &  &  & (\num{0.104}) \\
+Democrat &  &  &  & \num{-0.147} \\
+&  &  &  & (\num{0.102}) \\
+Num.Obs. & \num{18724} & \num{17784} & \num{17589} & \num{17784} \\
+Republican - Democrat (with leaners) & 0.415*** (0.025) & 0.399*** (0.025) & 0.327*** (0.035) &  \\
+\end{talltblr}
+\end{table}

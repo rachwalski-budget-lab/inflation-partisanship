@@ -1,0 +1,109 @@
+─ Session info ──────────────────────────────────
+ setting  value
+ version  R version 4.6.1 (2026-06-24)
+ os       macOS Tahoe 26.5.1
+ system   aarch64, darwin23
+ ui       RStudio
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/New_York
+ date     2026-11-22
+ rstudio  2026.06.0+242 Blue Plumbago (desktop)
+ pandoc   3.8.3 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
+ quarto   1.9.38 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto
+
+─ Packages ──────────────────────────────────────
+ ! package           * version  date (UTC) lib source
+ P askpass             1.2.1    2024-10-04 [?] RSPM
+ P assertthat          0.2.1    2019-03-21 [?] RSPM
+ P backports           1.5.1    2026-04-03 [?] RSPM
+ P bayestestR          0.20.0   2026-10-16 [?] CRAN (R 4.6.1)
+ P bit                 4.6.0    2025-03-06 [?] RSPM
+ P bit64               4.8.6    2026-09-01 [?] CRAN (R 4.6.1)
+ P brio                1.1.5    2024-04-24 [?] RSPM
+ P broom               1.0.13   2026-05-14 [?] CRAN (R 4.6.0)
+ P checkmate           2.3.4    2026-02-03 [?] RSPM
+ P cli                 3.6.6    2026-04-09 [?] RSPM
+ P crayon              1.5.3    2024-06-20 [?] RSPM
+ P data.table          1.18.6.1 2026-08-24 [?] CRAN (R 4.6.1)
+ P datawizard          1.5.0    2026-11-04 [?] CRAN (R 4.6.1)
+ P DBI                 1.3.0    2026-02-25 [?] CRAN (R 4.6.0)
+ P desc                1.4.3    2023-12-10 [?] RSPM
+ P digest              0.6.39   2025-11-19 [?] RSPM
+ P dplyr               1.2.1    2026-04-03 [?] RSPM
+ P evaluate            1.0.5    2025-08-27 [?] RSPM
+ P farver              2.1.2    2024-05-13 [?] RSPM
+ P fastmap             1.2.0    2024-05-15 [?] RSPM
+ P flextable           0.10.5   2026-11-19 [?] CRAN (R 4.6.1)
+ P fontBitstreamVera   0.1.1    2017-02-01 [?] CRAN (R 4.6.0)
+ P fontLiberation      0.1.0    2016-10-15 [?] CRAN (R 4.6.0)
+ P fontquiver          0.2.1    2017-02-01 [?] CRAN (R 4.6.0)
+ P forcats             1.0.1    2025-09-25 [?] CRAN (R 4.6.0)
+ P gdtools             0.6.0    2026-11-13 [?] CRAN (R 4.6.1)
+ P generics            0.1.4    2025-05-09 [?] RSPM
+ P ggplot2             4.0.4    2026-11-14 [?] CRAN (R 4.6.1)
+ P glue                1.8.1    2026-04-17 [?] RSPM
+ P gtable              0.3.6    2024-10-25 [?] RSPM
+ P haven               2.5.5    2025-05-30 [?] CRAN (R 4.6.0)
+ P here              * 1.0.2    2025-09-15 [?] RSPM
+ P hms                 1.1.4    2025-10-17 [?] RSPM
+ P htmltools           0.5.9    2025-12-04 [?] RSPM
+ P insight             1.7.0    2026-10-30 [?] CRAN (R 4.6.1)
+ P knitr               1.52     2026-09-06 [?] CRAN (R 4.6.1)
+ P labeling            0.4.3    2023-08-29 [?] RSPM
+ P lattice             0.22-9   2026-02-09 [?] CRAN (R 4.6.1)
+ P lifecycle           1.0.5    2026-01-08 [?] RSPM
+ P magrittr            2.0.5    2026-04-04 [?] RSPM
+ P Matrix            * 1.7-5    2026-03-21 [?] CRAN (R 4.6.1)
+ P mitools             2.7      2026-08-31 [?] CRAN (R 4.6.1)
+ P modelsummary        2.6.0    2026-02-13 [?] RSPM
+ P officer             0.7.9    2026-11-18 [?] CRAN (R 4.6.1)
+ P openssl             2.6.0    2026-11-17 [?] CRAN (R 4.6.1)
+ P otel                0.3.0    2026-11-07 [?] CRAN (R 4.6.1)
+ P parameters          0.30.0   2026-10-15 [?] CRAN (R 4.6.1)
+ P performance         0.20.0   2026-11-20 [?] CRAN (R 4.6.1)
+ P pillar              1.11.1   2025-09-17 [?] RSPM
+ P pkgconfig           2.0.3    2019-09-22 [?] RSPM
+ P pkgload             1.5.3    2026-06-15 [?] RSPM
+ P purrr               1.2.2    2026-04-10 [?] RSPM
+ P R6                  2.6.1    2025-02-15 [?] RSPM
+ P ragg                1.5.2    2026-03-23 [?] CRAN (R 4.6.0)
+ P RColorBrewer        1.1-3    2022-04-03 [?] RSPM
+ P Rcpp                1.1.2    2026-07-05 [?] CRAN (R 4.6.1)
+ P readr               2.2.0    2026-02-19 [?] RSPM
+   renv                1.3.1    2026-10-06 [1] CRAN (R 4.6.1)
+ P rlang               1.3.0    2026-07-05 [?] RSPM
+ P rmarkdown           2.32     2026-09-01 [?] CRAN (R 4.6.1)
+ P rprojroot           2.1.1    2025-08-26 [?] RSPM
+ P S7                  1.0.0    2026-11-19 [?] CRAN (R 4.6.1)
+ P scales              1.4.0    2025-04-24 [?] RSPM
+ P sessioninfo         1.2.4    2026-06-04 [?] RSPM
+ P survey            * 4.5      2026-02-24 [?] CRAN (R 4.6.0)
+ P survival          * 3.8-6    2026-01-16 [?] CRAN (R 4.6.1)
+ P systemfonts         1.3.4    2026-11-21 [?] CRAN (R 4.6.1)
+ P tables              0.9.35   2026-06-04 [?] RSPM
+ P testthat          * 3.3.2    2026-01-11 [?] RSPM
+ P textshaping         1.1.0    2026-11-20 [?] CRAN (R 4.6.1)
+ P tibble              3.3.1    2026-01-11 [?] RSPM
+ P tidyr               1.3.2    2025-12-19 [?] CRAN (R 4.6.0)
+ P tidyselect          1.2.1    2024-03-11 [?] RSPM
+ P tinytable           0.19.0   2026-09-16 [?] CRAN (R 4.6.1)
+ P tzdb                0.5.0    2025-03-15 [?] RSPM
+ P uuid                1.2-2    2026-01-23 [?] CRAN (R 4.6.0)
+ P vctrs               0.7.3    2026-04-11 [?] RSPM
+ P vroom               1.7.1    2026-03-31 [?] RSPM
+ P waldo               0.6.2    2025-07-11 [?] RSPM
+ P withr               3.0.3    2026-06-19 [?] RSPM
+ P xfun                0.62     2026-10-16 [?] CRAN (R 4.6.1)
+ P xml2                1.6.0    2026-06-22 [?] CRAN (R 4.6.1)
+ P yaml                2.3.12   2025-12-10 [?] RSPM
+ P zip                 3.0.2    2026-08-04 [?] CRAN (R 4.6.1)
+
+ [1] /Users/annarachwalski/Desktop/undergrad research/class papers/inflation_partisanship/renv/library/macos/R-4.6/aarch64-apple-darwin23
+ [2] /Users/annarachwalski/Library/Caches/org.R-project.R/R/renv/sandbox/macos/R-4.6/aarch64-apple-darwin23/46003b10
+
+ * ── Packages attached to the search path.
+ P ── Loaded and on-disk path mismatch.
+
+─────────────────────────────────────────────────

@@ -1,0 +1,23 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Robustness of the Partisan Gaps (Model 2 Specification)},
+note{}={Column 2 standardizes within wave using survey weights. Column 3 keeps W110, W116 and W120. Column 4 reproduces the submitted paper's standard errors. * p < .10. ** p < .05. *** p < .01.},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-5}{solid, black, 0.05em},
+hline{6}={1-5}{solid, black, 0.05em},
+hline{1}={1-5}{solid, black, 0.08em},
+hline{7}={1-5}{solid, black, 0.08em},
+column{2-5}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Model 2 (main) & Weighted standardization & Personal-concern waves only & Model 2, unclustered SEs \\
+Republican & \num{0.272}*** & \num{0.260}*** & \num{0.239}*** & \num{0.272}*** \\
+& (\num{0.030}) & (\num{0.029}) & (\num{0.034}) & (\num{0.026}) \\
+Democrat & \num{-0.141}*** & \num{-0.135}*** & \num{-0.124}*** & \num{-0.141}*** \\
+& (\num{0.034}) & (\num{0.033}) & (\num{0.037}) & (\num{0.029}) \\
+Num.Obs. & \num{17784} & \num{17784} & \num{13514} & \num{17784} \\
+\end{talltblr}
+\end{table}

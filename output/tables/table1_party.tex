@@ -1,0 +1,29 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Partisan Gaps in Price Concern: Survey-Weighted OLS Estimates},
+note{}={Outcome: price-concern item standardized within wave. Independents are the reference. Standard errors clustered by respondent in parentheses. * p < .10. ** p < .05. *** p < .01.},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]},
+hline{2}={1-4}{solid, black, 0.05em},
+hline{1}={1-4}{solid, black, 0.08em},
+hline{14}={1-4}{solid, black, 0.08em},
+column{2-4}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Model 1 & Model 2 & Model 3 \\
+Republican & \num{0.304}*** & \num{0.272}*** & \num{0.212}*** \\
+& (\num{0.030}) & (\num{0.030}) & (\num{0.034}) \\
+Democrat & \num{-0.122}*** & \num{-0.141}*** & \num{-0.077}** \\
+& (\num{0.034}) & (\num{0.034}) & (\num{0.038}) \\
+Constant & \num{-0.099}** & \num{-0.390}*** & \num{-0.269}*** \\
+& (\num{0.041}) & (\num{0.086}) & (\num{0.096}) \\
+Republican - Democrat & 0.427*** (0.028) & 0.413*** (0.028) & 0.289*** (0.040) \\
+Wave fixed effects & Yes & Yes & Yes \\
+Demographic controls & No & Yes & Yes \\
+Ideology control & No & No & Yes \\
+Observations (respondent-waves) & 18,724 & 17,784 & 17,589 \\
+Unique respondents & 9,499 & 9,066 & 8,995 \\
+\end{talltblr}
+\end{table}
