@@ -12,7 +12,7 @@ cfg <- yaml::read_yaml(here("config.yml"))
 df <- readRDS(here("data", "processed", cfg$data$processed_file))
 validate_input(df, required = c("qkey", "weight", "infl_std", "party_f"))
 
-# Outcome used in the main models (config switch; see decision log).
+# Outcome used in the main models (set in config.yml, explained in the decision log).
 dv <- if (isTRUE(cfg$model$standardize_weighted)) "infl_std_w" else "infl_std"
 
 # --- Survey designs -------------------------------------------------------------
@@ -78,7 +78,7 @@ waves_per_person <- df |>
   dplyr::count(n_waves, name = "n_respondents")
 
 # --- By-wave models (reviewer comment 3) ----------------------------------------
-# One respondent per row within a wave, so clustering is moot there; the same
+# One respondent per row within a wave, so clustering has no effect there. The same
 # design object is subset by wave for consistency.
 wave_ids <- levels(df$wave_f)
 
@@ -114,7 +114,7 @@ test_wave_het <- regTermTest(m_interact_wave, ~ party_f:wave_f, method = "Wald")
 
 # Pooled by item type (comparative / severity / personal concern). Wave fixed
 # effects are omitted here because item type is a function of wave (they would
-# be collinear with the item-type main effects); the outcome is already
+# be collinear with the item-type main effects). The outcome is already
 # centered within wave.
 m_interact_item <- svyglm(
   stats::as.formula(paste(dv, "~ party_f * item_type_f")),

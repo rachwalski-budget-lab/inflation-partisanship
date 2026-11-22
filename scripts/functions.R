@@ -46,7 +46,7 @@ assert_no_duplicate_rows <- function(joined, expected_n) {
 #'
 #' @param x Numeric (or haven_labelled) response vector.
 #' @param n_cats Number of substantive response categories.
-#' @param reverse Logical; flip the scale?
+#' @param reverse Logical. Flip the scale?
 #' @return Numeric vector on 1..n_cats with NA for nonresponse.
 #' @examples
 #' recode_item(c(1, 4, 99), n_cats = 4, reverse = TRUE) # 4 1 NA
@@ -93,7 +93,7 @@ code_party <- function(party) {
 #' Code party with leaners
 #'
 #' `scheme = "grouped"`: Independents who lean to a party are grouped with that
-#' party; non-leaning Independents are the reference.
+#' party. Non-leaning Independents are the reference.
 #' `scheme = "five"`: Republican, Lean Republican, Non-leaning Independent,
 #' Lean Democrat, Democrat (reference = Non-leaning Independent).
 #' Only respondents who are Rep/Dem/Ind on F_PARTY_FINAL are coded, so the
@@ -163,7 +163,7 @@ weighted_sd <- function(x, w) {
 #' @param x Numeric vector.
 #' @param w Weights (ignored if `weighted = FALSE`).
 #' @param weighted Logical.
-#' @return Numeric vector the same length as `x`; NAs preserved.
+#' @return Numeric vector the same length as `x`, with NAs preserved.
 #' @export
 standardize <- function(x, w = NULL, weighted = FALSE) {
   assertthat::assert_that(is.numeric(x), msg = "x must be numeric")

@@ -1,8 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite the paper and this repository."
-title: "Replication code for: Partisan Polarization and Inflation Concern in the United States, 2022-2023"
+message: "If you use this code, please cite it as below."
+title: "Partisan Polarization and Inflation Concern in the United States, 2022-2023: Replication Package"
 authors:
   - family-names: Rachwalski
     given-names: Anna
+    email: anna.rachwalski@yale.edu
+version: 1.0.0
+date-released: 2026-11-22
 license: MIT
 repository-code: "https://github.com/rachwalski-budget-lab/inflation-partisanship"

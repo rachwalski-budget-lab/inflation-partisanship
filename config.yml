@@ -2,13 +2,13 @@
 # Pair each discretionary choice with an entry in docs/decision_log.md.
 
 data:
-  # Raw Pew ATP files (read-only; not in the repo, see data/raw/README.md).
+  # Raw Pew ATP files are read-only and not in the repo. See data/raw/README.md.
   # Path is relative to the .Rproj root.
   raw_dir: "data/raw/wave data"
   processed_file: "analysis_clean.rds"   # .rds keeps factor levels
   id_col: "QKEY"                         # ATP panelist ID, stable across waves
 
-# One entry per wave. `item` is the outcome variable; `reverse` flips the
+# One entry per wave. `item` is the outcome variable. `reverse` flips the
 # scale so higher = more concern / more negative price perception.
 # `form` notes split-sample items (asked of one random half of the wave).
 waves:

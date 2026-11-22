@@ -2,7 +2,7 @@
 # Tables and figures for the paper.
 # Inputs:  output/model_results.rds, data/processed/*.rds
 # Outputs: output/tables/*.docx|.tex|.csv, output/figures/*.png|.pdf
-# LaTeX: tables use tinytable (preamble needs \usepackage{tabularray});
+# LaTeX: tables use tinytable (preamble needs \usepackage{tabularray}).
 #        figures are vector PDFs sized for a 6.5-inch text width, with no
 #        titles drawn in (captions go in the .tex file).
 # -----------------------------------------------------------------------------
@@ -362,8 +362,8 @@ write_table(
 readr::write_csv(sample_flow, file.path(tab_dir, "sample_flow.csv"))
 
 # --- Figures ------------------------------------------------------------------
-# Party colors (validated categorical slots; identity also carried by shape
-# and direct labels, so it is never color alone).
+# Party colors. Party is also shown by marker shape and the legend, so the
+# figures do not rely on color alone.
 pal <- c(Republican = "#eb6834", Democrat = "#2a78d6", Independent = "#8a8984")
 shp <- c(Republican = 16, Democrat = 17, Independent = 15)
 
