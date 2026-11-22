@@ -1,0 +1,116 @@
+# config.yml — every analytical choice in one place.
+# Pair each discretionary choice with an entry in docs/decision_log.md.
+
+data:
+  # Raw Pew ATP files (read-only; not in the repo, see data/raw/README.md).
+  # Path is relative to the .Rproj root.
+  raw_dir: "data/raw/wave data"
+  processed_file: "analysis_clean.rds"   # .rds keeps factor levels
+  id_col: "QKEY"                         # ATP panelist ID, stable across waves
+
+# One entry per wave. `item` is the outcome variable; `reverse` flips the
+# scale so higher = more concern / more negative price perception.
+# `form` notes split-sample items (asked of one random half of the wave).
+waves:
+  - wave: "W101"
+    folder: "w101_jan22"
+    file: "ATP W101.sav"
+    weight: "WEIGHT_W101"
+    item: "ECONLIST_PRCG_W101"
+    item_type: "Comparative"
+    n_cats: 5
+    reverse: false
+    form: "Form 2 only (XFORM = 2)"
+    field_dates: "Jan. 10-17, 2022"
+    cpi_month: "Jan 2022"
+    cpi_yoy: 7.5
+    wording: >-
+      Thinking about some areas of the U.S. economy, how does each of the
+      following compare to one year ago? Prices for food and consumer goods.
+      (1 = A lot better than a year ago ... 5 = A lot worse than a year ago)
+  - wave: "W107"
+    folder: "w107_aprl22"
+    file: "ATP W107.sav"
+    weight: "WEIGHT_W107"
+    item: "NATPROBS_INFL_W107"
+    item_type: "Problem severity"
+    n_cats: 4
+    reverse: true
+    form: "Form 1 only (XFORM = 1)"
+    field_dates: "Apr. 25-May 1, 2022"
+    cpi_month: "Apr 2022"
+    cpi_yoy: 8.3
+    wording: >-
+      How much of a problem do you think each of the following are in the
+      country today? Inflation. (1 = A very big problem ... 4 = Not a problem
+      at all)
+  - wave: "W110"
+    folder: "w110_jun22"
+    file: "ATP W110.sav"
+    weight: "WEIGHT_W110"
+    item: "ECONCONC_INFL_W110"
+    item_type: "Personal concern"
+    n_cats: 4
+    reverse: true
+    form: "All respondents"
+    field_dates: "Jun. 27-Jul. 4, 2022"
+    cpi_month: "Jun 2022"
+    cpi_yoy: 9.1
+    wording: >-
+      How concerned, if at all, are you personally about each of the following
+      economic issues in the country today? Rising prices for food and consumer
+      goods. (1 = Very concerned ... 4 = Not at all concerned)
+  - wave: "W116"
+    folder: "w116_oct22"
+    file: "ATP W116.sav"
+    weight: "WEIGHT_W116"
+    item: "ECONCONC_PRICE_W116"
+    item_type: "Personal concern"
+    n_cats: 4
+    reverse: true
+    form: "All respondents"
+    field_dates: "Oct. 10-16, 2022"
+    cpi_month: "Oct 2022"
+    cpi_yoy: 7.7
+    wording: >-
+      How concerned, if at all, are you personally about each of the following
+      economic issues in the country today? The price of food and consumer
+      goods. (1 = Very concerned ... 4 = Not at all concerned)
+  - wave: "W120"
+    folder: "w120_jan23"
+    file: "ATP W120.sav"
+    weight: "WEIGHT_W120"
+    item: "ECONCONC_PRICE_W120"
+    item_type: "Personal concern"
+    n_cats: 4
+    reverse: true
+    form: "All respondents"
+    field_dates: "Jan. 18-24, 2023"
+    cpi_month: "Jan 2023"
+    cpi_yoy: 6.4
+    wording: >-
+      How concerned, if at all, are you personally about each of the following
+      economic issues in the country today? The price of food and consumer
+      goods. (1 = Very concerned ... 4 = Not at all concerned)
+
+# Demographic and party variables shared by every wave (F_ = profile vars).
+vars:
+  party: "F_PARTY_FINAL"        # 1 Rep, 2 Dem, 3 Ind, 4 Something else, 99 Ref
+  party_lean: "F_PARTYLN_FINAL" # asked of non-partisans: 1 Rep, 2 Dem
+  gender: "F_GENDER"
+  age: "F_AGECAT"
+  educ: "F_EDUCCAT"
+  income: "F_INC_SDT1"
+  ideo: "F_IDEO"
+
+model:
+  # Main specification standardizes within wave WITHOUT weights (matches the
+  # submitted paper). Weighted standardization is reported as a robustness check.
+  standardize_weighted: false
+  # Cluster SEs on respondent (reviewer comment 4).
+  cluster_on_respondent: true
+  stars: [0.10, 0.05, 0.01]
+
+output:
+  figures: "output/figures"
+  tables: "output/tables"

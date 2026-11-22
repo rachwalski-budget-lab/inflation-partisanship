@@ -1,0 +1,37 @@
+# renv: commit renv.lock, ignore the local library
+renv/library/
+renv/staging/
+renv/python/
+renv/sandbox/
+
+# R session files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Secrets
+.Renviron
+.env
+*_secret*
+*.pem
+
+# macOS
+.DS_Store
+
+# Raw data: Pew ATP files are distributed by Pew under its terms of use and
+# are not redistributed here. See data/raw/README.md for how to obtain them.
+data/raw/*
+!data/raw/README.md
+
+# Processed data and the fitted-model file are rebuilt by the scripts.
+data/processed/*
+output/*.rds
+!**/.gitkeep
+
+# Tables, figures and numbers_for_text.md ARE committed so readers can check
+# results against the paper without rerunning.
+
+# Private working files (not part of the replication package)
+drafts/
+legacy_code/
